@@ -1,21 +1,38 @@
 <html>
   <head>
     <title>Jsem Dominik Bláha</title>
-    
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
   </head>
   <body>
-    <main>
+    <style>
+      @keyframes rotate {
+          from {
+              transform: rotate(0deg);
+          }
+          90% {
+              transform: rotate(324deg);
+          }
+          92% {
+              transform: rotate(320deg);
+          }
+          94% {
+              transform: rotate(326deg);
+          }
+          to {
+              transform: rotate(360deg);
+          }
+      }
+    </style>
+    <img src="./loader.png" width="50" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);" />
+    <main style="animation: rotate 4s linear infinite; transform-origin: 50%; max-width: 500px; margin: 0 auto; opacity: 0.1; height: 100vh; width: 100vw; overflow: hidden; filter: blur(5px)">
       <header>
         <h1>Jsem Dominik Bláha...</h1>
         <span>ha.. ha.</span>
       </header>
       <img src="ja-300.png" srcset="ja-600.png 2x" width="300" height="300" alt="Já" title="Já" />
       <p>
-        Mám <a href="https://www.linkedin.com/in/blahadominik" target="_blank">LinkedIn</a>, <a href="https://github.com/DNepovim/" target="_blank">GitHub</a> a <a href="https://x.com/dnepovim" target="_blank">Twitter</a>.<br />
-        A také mám staré dobré <a href="./cvDominikBlaha2024.pdf" target="_blank">CV</a>.
+        Mám <a href="https://www.linkedin.com/in/blahadominik" target="_blank">LinkedIn</a>, <a href="https://github.com/DNepovim/" target="_blank">GitHub</a> a <a href="https://x.com/dnepovim" target="_blank">Twitter</a>.
       </p>
-      <p>Toto je rychlá verze mého webu. Pomalá je <a href="lazy.html">zde</a>.</p>
       <section>
         <h2>Vyrábím weby...</h2>
         <p>... a i když to tak nevypadá, umím krom HTML i CSS.</p>
@@ -80,6 +97,10 @@
           Také jsem tři roky vedl tým, který připravoval <strong>okresní skatuské setkání</strong>. Měl jsem toho hodně.<br />
           Teď vedu <strong>kurz pro pracovníky s mládeží</strong> v ČCE, který jsem založil a spoluvedu své domovské <storng>skautské středisko</storng> v Kralupech nad Vltavou.
         </br>
+      </section>
+      <section>
+        <h2>Krom toho taky studuji...</h2>
+        <p><a href="https://pvsps.cz" target="_blank">Pražskou vysokou školu psychosociálních studií</a>. Nejvíc mě zajímá Jungova analytická psychologie, osovuje mě ale i Logoterapie Viktora Frnakla a terapie zaměřená na klienta Carla Rogerse.</p>
       </section>
       <section>
         <h2>Krom toho taky studuji...</h2>
