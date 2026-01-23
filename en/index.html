@@ -1,24 +1,7 @@
 <html>
   <head>
     <title>I am Dominik Bláha</title>
-
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-  <script>
-    (function() {
-      try {
-        document.addEventListener('keydown', function(event) {
-          try {
-            if (event.key === '1') {
-              window.location.href = window.location.origin;
-            }
-          } catch (innerError) {
-          }
-        }, true); 
-      } catch (outerError) {
-        console.warn("Script initialization failed, likely due to a browser conflict.");
-      }
-     })();
-    </script>
   </head>
   <body>
     <main>
@@ -107,6 +90,16 @@
           And if you need something worthwhile, write to me directly at <a href="mailto:iam@dominikblaha.cz" target="_blank">iam@dominikblaha.cz</a>.
         </p>
       </section>
-    </main>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        window.addEventListener('keydown', function(e) {
+          if (e.key === '1') {
+            e.preventDefault();
+            e.stopPropagation();
+            window.location.href = window.location.origin
+          }
+        }, true); 
+      });
+    </script></main>
   </body>
 </html>

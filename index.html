@@ -1,24 +1,7 @@
 <html>
   <head>
     <title>Jsem Dominik Bláha</title>
-
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-  <script>
-    (function() {
-      try {
-        document.addEventListener('keydown', function(event) {
-          try {
-            if (event.key === '2') {
-              window.location.href = window.location.origin + "/en";
-            }
-          } catch (innerError) {
-          }
-        }, true); 
-      } catch (outerError) {
-        console.warn("Script initialization failed, likely due to a browser conflict.");
-      }
-     })();
-  </script>
   </head>
   <body>
     <main>
@@ -109,6 +92,16 @@
       </section>
 
     </main>
-     
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        window.addEventListener('keydown', function(e) {
+          if (e.key === '2') {
+            e.preventDefault();
+            e.stopPropagation();
+            window.location.href = window.location.origin + "/en";
+          }
+        }, true); 
+      });
+    </script>
   </body>
 </html>
