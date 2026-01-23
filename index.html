@@ -4,11 +4,20 @@
 
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
   <script>
-    document.addEventListener('keydown', function(event) {
-      if (event.key === '2') {
-        window.location.href = window.location.origin + '/en';
+    (function() {
+      try {
+        document.addEventListener('keydown', function(event) {
+          try {
+            if (event.key === '1') {
+              window.location.href = window.location.origin + "/en";
+            }
+          } catch (innerError) {
+          }
+        }, true); 
+      } catch (outerError) {
+        console.warn("Script initialization failed, likely due to a browser conflict.");
       }
-    });
+     })();
   </script>
   </head>
   <body>
@@ -18,7 +27,7 @@
         <span>ha.. ha.</span>
       </header>
       <img src="ja-300.png" srcset="ja-600.png 2x" width="300" height="300" alt="Já" title="Já" />
-      <p><code>For english press 2</code></p>
+      <p><a href="/en"><code>For english press 2</code></a></p>
       <p>
         Mám <a href="https://www.linkedin.com/in/blahadominik" target="_blank">LinkedIn</a>, <a href="https://github.com/DNepovim/" target="_blank">GitHub</a> a <a href="https://x.com/dnepovim" target="_blank">Twitter</a>.<br />
         A také mám staré dobré <a href="./cvDominikBlaha2024Cz.pdf" target="_blank">CV</a>.

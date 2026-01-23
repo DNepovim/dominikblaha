@@ -4,12 +4,21 @@
 
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
   <script>
-    document.addEventListener('keydown', function(event) {
-      if (event.key === '1') {
-        window.location.href = window.location.origin;
+    (function() {
+      try {
+        document.addEventListener('keydown', function(event) {
+          try {
+            if (event.key === '1') {
+              window.location.href = window.location.origin;
+            }
+          } catch (innerError) {
+          }
+        }, true); 
+      } catch (outerError) {
+        console.warn("Script initialization failed, likely due to a browser conflict.");
       }
-    });
-  </script>
+     })();
+    </script>
   </head>
   <body>
     <main>
@@ -18,7 +27,7 @@
         <span>ha.. ha.</span>
       </header>
       <img src="../ja-300.png" srcset="../ja-600.png 2x" width="300" height="300" alt="Me" title="Me" />
-      <p><code>Pro češtinu stikněte 1</code></p>
+      <p><a href="/"><code>Pro češtinu stikněte 1</code></a></p>
       <p>
         I have a <a href="https://www.linkedin.com/in/blahadominik" target="_blank">LinkedIn</a>, <a href="https://github.com/DNepovim/" target="_blank">GitHub</a>, and <a href="https://x.com/dnepovim" target="_blank">Twitter</a>.<br />
         And I also have a good old <a href="../cvDominikBlaha2024En.pdf" target="_blank">CV</a>.
