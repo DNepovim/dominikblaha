@@ -1,7 +1,7 @@
 {
   "redirects": [
     {
-      "source": "/(.*)",
+      "source": "/((?!en).*)",
       "has": [{ "type": "host", "value": "dominikblaha.xyz" }],
       "destination": "/en/$1",
       "permanent": true
