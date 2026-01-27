@@ -1,10 +1,11 @@
 {
-  "redirects": [
+  "rewrites": [
     {
-      "source": "/((?!en).*)",
-      "has": [{ "type": "host", "value": "dominikblaha.xyz" }],
-      "destination": "/en/$1",
-      "permanent": true
+      "source": "/:path*",
+      "has": [
+        { "type": "host", "value": "dominikblaha.xyz" }
+      ],
+      "destination": "/en/:path*"
     }
   ]
 }
