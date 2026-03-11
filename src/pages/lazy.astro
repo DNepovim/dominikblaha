@@ -1,0 +1,62 @@
+---
+import "@/styles/global.css";
+import loaderSrc from "@/images/loader.png";
+import EnContent from "./en.mdx";
+---
+
+<!doctype html>
+<html lang="en" class="font-text">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>Dominik Bláha</title>
+    <style>
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        90% {
+          transform: rotate(324deg);
+        }
+        92% {
+          transform: rotate(320deg);
+        }
+        94% {
+          transform: rotate(326deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .loader {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        border-radius: 50%;
+        z-index: 10;
+      }
+
+      .spinning {
+        animation: rotate 4s linear infinite;
+        transform-origin: 50%;
+        max-width: 500px;
+        margin: 0 auto;
+        opacity: 0.1;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        filter: blur(5px);
+      }
+    </style>
+  </head>
+  <body>
+    <img src={loaderSrc.src} class="loader" alt="" />
+    <main class="spinning">
+      <EnContent />
+    </main>
+  </body>
+</html>
